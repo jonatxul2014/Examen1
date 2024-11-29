@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Examen1 App de Edad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Ingrese el Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Ingrese la Edad</ion-label>
+    <ion-input [(ngModel)]="edad" type="number" required></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="evaluarEdad()">Evaluar la Edad</ion-button>
+
+  <ion-card *ngIf="resultado">
+    <ion-card-header>
+      <ion-card-title>Resultado de la Valoracion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ resultado }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
